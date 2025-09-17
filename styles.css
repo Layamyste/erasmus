@@ -1,0 +1,261 @@
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap);
+
+
+
+*{
+    font-family: 'Montserrat';
+
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+body{
+    margin: 0 auto;
+} 
+
+/* LANDING PAGE */
+
+header.header {
+    display: flex;
+    justify-content: space-between; /* logo à gauche, nav à droite */
+    align-items: center;
+    padding: 20px 50px;
+    flex-wrap: wrap; /* permet de passer à la ligne si l’écran est trop petit */
+}
+
+header.header img{
+    width: 6%;
+    min-width: 80px; /* évite qu’il devienne trop petit */
+}
+
+section.top-page{
+    background: url('../images/accueil.jpg');
+    background-size: cover;
+    color: white;
+    height: 100vh;
+    padding: 25px;
+    background-position: center;
+}
+
+/* page de bienvenue */
+.landing-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;   /* centre horizontalement */
+    justify-content: center; /* centre verticalement */
+    height: 100%; 
+    text-align: center; 
+}
+
+.big-title {
+    color: white;
+    font-size: 40px;
+    max-width: 900px; 
+    margin-bottom: 100px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* bouton "En savoir plus" */
+.scroll-down {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #ffffff;
+    color: #333;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.scroll-down:hover {
+    background-color: #72acc3;
+    color: #ffffff;
+}
+
+/* menu de navigtation */
+
+/* Menu de navigation */
+nav.nav {
+    display: flex;                  /* met les éléments côte à côte */
+    justify-content: center;        /* centre le menu dans la barre */
+    align-items: center;            /* centre verticalement */
+    gap: 30px;                      /* espace entre les liens */
+    list-style: none;               /* enlève les puces */
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;                /* permet le retour à la ligne sur petit écran */
+}
+
+nav.nav li a {
+    padding: 20px;
+    text-decoration: none;
+    color: whitesmoke;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+nav.nav li:hover {
+    color: #72acc3;  /* changement de couleur au survol */
+    transform: scale(1.1); /* Agrandir legerement le texte */
+}
+
+/* SERVICES */
+
+.services {
+    display: flex;
+    justify-content: space-around; /* espace entre les blocs */
+    flex-wrap: wrap;               /* passe les blocs à la ligne sur petit écran */
+    padding: 60px 20px;
+    background-color: #f8f8f8;
+    text-align: center;
+    gap: 40px;                     /* espace entre chaque bloc */
+}
+
+.services-item {
+    background-color: white;       /* couleur de la box */
+    padding: 30px 20px;            /* espace à l’intérieur */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* ombre subtile */
+    max-width: 300px;              /* largeur maximale */
+    flex: 1 1 250px;               /* flex-grow, flex-shrink, base-width */
+}
+
+.services-item i {
+    color: #72acc3;
+    margin-bottom: 13px;
+}
+
+.services-item h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.services-item p {
+    font-size: 13px;
+    color: #555;
+}
+
+/* BESTS TRAVEL */
+
+.section-title {
+    font-size: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700; /* un peu plus gras pour un titre */
+    position: relative;
+    color: #000000; /* noir moins agressif que #000 */
+}
+
+
+.section-title::before {
+    content: "";
+    position: absolute;
+    background-color: #72acc3;
+    width: 50px;
+    height: 7px;
+    bottom: 0;
+}
+
+.bests-travel {
+    margin: 100px;
+}
+
+.bests-contries {
+    min-height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.contries-box {
+    position: relative;
+    flex: 1 1 30%;
+    min-width: 300px;
+    height: 500px;
+    background-size: cover;       /* l’image remplit la box sans se déformer */
+    background-position: center;  /* centre l’image */
+    background-repeat: no-repeat; /* évite les répétitions */
+    border-radius: 10px;          /* coins arrondis (optionnel) */
+    overflow: hidden; /* 🔑 empêche le contenu de déborder */
+    flex-direction: column;
+    display: flex;
+    align-items: flex-end; /* 🔑 colle le contenu en bas */
+    text-decoration: none; /* enlève le soulignement du <a> */
+}
+
+.contries-italie {
+    background-image: url(../images/Italie.jpg);
+}
+
+.contries-portugal {
+    background-image: url(../images/Portugal.jpg);
+}
+
+.contries-france {
+    background-image: url(../images/France.jpg);
+}
+
+.contries-details {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center ;
+    border-radius: 0 0 10px 10px;
+    gap: 10px;
+}
+
+/* Nom du pays en haut centre */
+.contries-name {
+    position: absolute;
+    top: 15px;               /* distance depuis le haut */
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    font-size: 22px;
+    font-weight: 600;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.6); /* pour bien voir sur l’image */
+}
+
+/* Bouton "En savoir plus" en bas centre */
+.contries-more {
+    position: absolute;
+    bottom: 15px;            /* distance depuis le bas */
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 6px 15px;
+    background-color: #72acc3;
+    color: #ffffff;
+    font-weight: 600;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.contries-box:hover .contries-more {
+    transform: translateX(-50%) scale(1.1);
+    background-color: #333;
+    color: #fff;
+}
+
+footer {
+    display: flex;                 
+    justify-content: space-between;
+    align-items: center;          
+    padding: 20px 50px;
+    background-color: #f8f8f8;   
+}
+
+footer img {
+    max-width: 70px;
+    height: auto;    
+}
+
+footer p {
+    font-size: 14px;
+    color: #555;
+    margin: 0;
+    text-align: right;
+}
